@@ -1,0 +1,360 @@
+// font-family: 'Kaushan Script', cursive;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//Navigation
+nav {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  * {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  //Left side - Logo
+  .nav-logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.875em;
+    font-weight: 700;
+    margin: 16px 0px;
+    margin-left: 200px;
+  }
+
+  //Right side - Menu
+  .nav-menu {
+    display: flex;
+    margin-right: 200px;
+    align-items: center;
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      margin-right: 50px;
+      a {
+        &:hover {
+          border-bottom: 3px #fce38a solid;
+        }
+      }
+    }
+    a,
+    i {
+      &:hover {
+        color: #fce38a;
+      }
+    }
+
+    //Cart Icon
+    .cart {
+      margin-right: 40px;
+    }
+
+    //Search Icon
+    #search {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    //Search Input
+    input[type="text"] {
+      color: black;
+      display: none;
+    }
+  }
+
+  //Burger Icon
+  #burger {
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    overflow: hidden;
+    top: 14px;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: #fce38a;
+    }
+  }
+
+  //Burger Menu
+  #burger-menu {
+    display: block;
+    position: absolute;
+    transition: 1s;
+    width: 100%;
+    padding: 0px 10px;
+    height: 0px;
+    overflow: hidden;
+    top: 68px;
+    text-align: center;
+
+    p {
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        a {
+          color: #fce38a;
+        }
+      }
+    }
+  }
+  //display: none;
+}
+
+header {
+  width: 100%;
+  height: auto;
+
+  //Background Image
+  .main-img {
+    color: #fff;
+    width: 100%;
+    height: 1000px;
+    background-image: url("../assets/picture.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //Creative template text
+    .main-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 550px;
+
+      //Main text containers
+      .text-container,
+      .text-container2,
+      .text-container3,
+      .text-container4 {
+        width: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        p {
+          width: 100%;
+          text-align: center;
+          font-family: "Kaushan Script", cursive;
+          font-size: 4em;
+        }
+
+        //Main text - Welcome to mogo
+        h1 {
+          width: 100%;
+          text-align: center;
+          font-family: "Montserrat", sans-serif;
+          font-size: 8.375em;
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+      .text-container2 {
+        left: 1500px;
+      }
+      .text-container3 {
+        left: 3000px;
+      }
+      .text-container4 {
+        left: 4500px;
+      }
+    }
+
+    //border
+    .border {
+      width: 60px;
+      margin-top: 30px;
+      border-bottom: 3px #fff solid;
+    }
+
+    //Button
+    input {
+      width: 160px;
+      height: 40px;
+      margin: 50px;
+      border: 3px #fff solid;
+      color: #fff;
+      background-color: transparent;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        border: 3px #fce38a solid;
+        color: #fce38a;
+      }
+    }
+
+    //Buttons 01-02-03-04
+    .carousele {
+      display: flex;
+      .option {
+        width: 100%;
+        margin: 0px 10px;
+        cursor: pointer;
+        &-border {
+          position: relative;
+          width: 240px;
+          border-top: 3px #fff solid;
+        }
+        &-red-border {
+          position: absolute;
+          width: 0px;
+          border-top: 3px red solid;
+          top: -3px;
+          left: 0;
+          transition: 0.2s;
+        }
+        &-text {
+          display: flex;
+          align-items: center;
+          &-number {
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-family: "Montserrat", sans-serif;
+          }
+          &-descr {
+            margin-bottom: 0;
+            margin-left: 10px;
+            font-size: 1.125em;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  nav {
+    .nav-logo {
+      margin-left: 100px;
+    }
+    .nav-menu {
+      margin-right: 100px;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  nav {
+    .nav-menu {
+      display: none;
+    }
+    #burger {
+      display: block;
+    }
+  }
+
+  header {
+    //Background Image
+    .main-img {
+      height: 1000px;
+
+      //Creative template text
+      .main-container {
+        height: 300px;
+
+        .text-container,
+        .text-container2,
+        .text-container3,
+        .text-container4 {
+          p {
+            font-size: 2em;
+          }
+          h1 {
+            font-size: 4.375em;
+          }
+        }
+      }
+      .carousele {
+        .option {
+          margin-top: 50px;
+          width: 100%;
+          &-border {
+            width: 140px;
+          }
+          &-red-border {
+            width: 0px;
+          }
+          &-text {
+            &-number {
+              font-size: 1em;
+            }
+            &-descr {
+              font-size: 0.75em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    .nav-logo {
+      margin-left: 50px;
+    }
+    #burger {
+      right: 50px;
+    }
+  }
+
+  header {
+    //Background Image
+    .main-img {
+      height: 1000px;
+      //Creative template text
+      .main-container {
+        height: 200px;
+
+        .text-container,
+        .text-container2,
+        .text-container3,
+        .text-container4 {
+          p {
+            font-size: 1.5em;
+          }
+          h1 {
+            font-size: 3em;
+          }
+        }
+      }
+      .carousele {
+        .option {
+          margin-top: 50px;
+          &-border {
+            width: 70px;
+          }
+          &-text {
+            &-number {
+              font-size: 0.75em;
+            }
+            &-descr {
+              font-size: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
