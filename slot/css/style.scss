@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.stuff {
+  position: relative;
+  margin-top: 110px;
+  margin-left: 40px;
+  text-align: center;
+  text-align: -webkit-center;
+  p {
+    font-weight: 700;
+  }
+  .text {
+    display: flex;
+    position: relative;
+    #addscore {
+      font-size: 12px;
+      position: absolute;
+      left: 45px;
+      top: 25px;
+      transition: 0.5s;
+    }
+  }
+  #option-box {
+    display: none;
+    position: absolute;
+    // display: none;
+    top: -110px;
+    right: -30px;
+    background-color: rgba(255, 166, 0, 0.541);
+    width: 0%;
+    height: 340px;
+    transition: 1s;
+    z-index: 5;
+    text-align: end;
+    #close-button {
+      opacity: 0;
+      cursor: pointer;
+      border: 1px black solid;
+      padding: 2px 5px;
+      margin-top: 20px;
+      margin-right: 20px;
+      transition: 0.5s;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    #howto {
+      // display: none;
+      transition: 0.7s;
+      opacity: 0;
+      text-align: center;
+      img {
+        opacity: 80%;
+      }
+      p {
+        margin: 5px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+#options {
+  display: block;
+  width: 30px;
+  margin-bottom: 10px;
+  background-color: orange;
+  border: 1px black solid;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    border: 1px black solid;
+    background-color: #fff;
+    background-color: rgba(255, 166, 0, 0.575);
+  }
+}
+#bet-size-container {
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  #button-plus,
+  #button-minus {
+    cursor: pointer;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: orange;
+    font-weight: 700;
+    border: none;
+    border: 1px black solid;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgba(255, 166, 0, 0.575);
+    }
+  }
+  #bet-size {
+    font-weight: 700;
+    margin: 0 10px;
+  }
+}
+
+#addscore {
+  color: green;
+}
+#slot {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+}
+#slot * {
+  margin: 3px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+#spin-button {
+  background-color: rgba(255, 166, 0, 0.575);
+
+  border: none;
+  border: 3px black solid;
+  border-radius: 5px;
+  margin: 0px;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+  &:hover {
+    background-color: orange;
+    cursor: pointer;
+  }
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box6,
+#box7,
+#box8,
+#box9 {
+  border-radius: 5px;
+  background-color: grey;
+}
+
+#box1 {
+  grid-area: a;
+}
+#box2 {
+  grid-area: b;
+}
+#box3 {
+  grid-area: c;
+}
+#box4 {
+  grid-area: d;
+}
+#box5 {
+  grid-area: e;
+}
+#box6 {
+  grid-area: f;
+}
+#box7 {
+  grid-area: g;
+}
+#box8 {
+  grid-area: h;
+}
+#box9 {
+  grid-area: i;
+}
+
+.blink {
+  border: 3px black solid;
+  animation: blink 0.3s;
+  animation-iteration-count: 3;
+}
+
+.spin {
+  animation: spin 0.8s linear 1;
+}
+
+@keyframes blink {
+  50% {
+    border-color: #fff;
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    // justify-content: center;
+    display: block;
+  }
+  .stuff {
+    margin: 0;
+    .text {
+      justify-content: center;
+      #addscore {
+        left: 50%;
+      }
+    }
+  }
+  #slot {
+    justify-content: center;
+  }
+}

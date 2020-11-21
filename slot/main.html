@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="slot" id="slot">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+      <div class="box" id="box4"></div>
+      <div class="box" id="box5"></div>
+      <div class="box" id="box6"></div>
+      <div class="box" id="box7"></div>
+      <div class="box" id="box8"></div>
+      <div class="box" id="box9"></div>
+    </div>
+
+    <div class="stuff">
+      <i class="fas fa-cog" id="options"></i>
+      <div id="option-box">
+        <i class="fas fa-times" id="close-button"></i>
+        <div id="howto">
+          <p style="margin-bottom: 20px; font-size: 16px">
+            Winning Combinations
+          </p>
+          <img src="assets/howto1.png" alt="" />
+          <img src="assets/howto2.png" alt="" />
+          <img src="assets/howto3.png" alt="" />
+          <img src="assets/howto4.png" alt="" />
+          <img src="assets/howto5.png" alt="" />
+          <p style="margin-top: 20px; margin-bottom: 10px; font-size: 16px">
+            Winning Symbols
+          </p>
+          <p>10 - 0.5x bet</p>
+          <p>J - 1x bet</p>
+          <p>Q - 2.5x bet</p>
+          <p>K - 5x bet</p>
+          <p>A - 10x bet</p>
+        </div>
+      </div>
+      <input type="button" value="SPIN" id="spin-button" />
+      <div id="bet-size-container">
+        <input type="button" value="-" id="button-minus" />
+        <span id="bet-size">Bet:</span>
+        <input type="button" value="+" id="button-plus" />
+      </div>
+      <div class="text">
+        <p id="score"></p>
+        <p id="addscore"></p>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/08e30f2d5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scr.js"></script>
+  </body>
+</html>
