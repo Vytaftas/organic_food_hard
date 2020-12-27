@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: -o-center;
+}
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-container {
+  border-radius: 20px;
+  width: 60%;
+  background-color: darkkhaki;
+  padding: 20px 0 5px 0;
+  .input-container {
+    width: 95%;
+    background-color: rgba(0, 128, 0, 0.5);
+    opacity: 70%;
+    padding: 20px 0;
+    border-radius: 20px 20px 0 0;
+    input {
+      border: none;
+      border-radius: 2px;
+    }
+    .add-item {
+      border: 1px black solid;
+      border-radius: 5px;
+      &:hover {
+        border: 1px moccasin solid;
+        color: moccasin;
+      }
+    }
+  }
+
+  .item-container {
+    background-color: darkkhaki;
+    padding: 0;
+    width: 95%;
+    border-radius: 0 0 20px 20px;
+    margin-top: 0;
+    overflow: hidden;
+    .item {
+      display: grid;
+      grid-template-columns: 10% 40% 30% 20%;
+      grid-template-rows: 1, auto;
+      align-items: center;
+      input {
+        margin-left: 20px;
+      }
+      button {
+        margin: 0 10px;
+      }
+      .description {
+        overflow-wrap: break-word;
+      }
+    }
+  }
+  p {
+    font-weight: 500;
+  }
+}
+
+.structure {
+  display: grid;
+  grid-template-columns: 10% 40% 30% 20%;
+  grid-template-rows: 1, auto;
+  align-items: center;
+  padding: 5px 0;
+  font-weight: 900;
+}
+
+.delete-button,
+.add-item {
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: 500;
+  &:hover {
+    border: 1px moccasin solid;
+    color: moccasin;
+  }
+}
+
+.checked-item {
+  text-decoration: line-through;
+}
+
+.status-active {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.status-completed {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.status-none {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.status-active,
+.status-completed,
+.status-none {
+  opacity: 70%;
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.fallbackDateTimePicker {
+  width: 95%;
+  background-color: rgba(0, 128, 0, 0.5);
+  opacity: 70%;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-container {
+    width: 100%;
+  }
+  * {
+    p,
+    span,
+    input,
+    button {
+      font-size: 0.7rem;
+    }
+  }
+}

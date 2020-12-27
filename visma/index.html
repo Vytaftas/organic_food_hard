@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo VISMA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="main-container">
+      <div class="input-container">
+        <h1>TO-DO LIST</h1>
+        <p>Add an item to your list:</p>
+
+        <!-- Description Input -->
+        <input
+          class="description"
+          type="text"
+          name="description"
+          placeholder="Description"
+          maxlength="160"
+        />
+
+        <!-- Deadline Input -->
+        <div style="margin: 10px 25px 10px 0">
+          <input class="deadline-check" type="checkbox" name="deadline-check" />
+          <input
+            class="deadline"
+            type="datetime-local"
+            name="deadline"
+            placeholder="deadline"
+            disabled
+          />
+        </div>
+        <!-- Add Button -->
+        <input class="add-item" type="button" value="Add" />
+      </div>
+
+      <!-- Date Input for Firefox/older browsers -->
+      <div class="fallbackDateTimePicker">
+        <div>
+          <div style="margin-bottom: 10px">
+            <input
+              class="fallbackCheckbox"
+              type="checkbox"
+              name="fallbackCheckbox"
+            />
+            <span>Deadline</span>
+          </div>
+          <span>
+            <label for="year">Year:</label>
+            <select id="year" name="year" disabled></select>
+          </span>
+          <span>
+            <label for="month">Month:</label>
+            <select
+              id="month"
+              name="month"
+              style="margin-bottom: 10px"
+              disabled
+            >
+              <option selected value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </span>
+          <span>
+            <label for="day">Day:</label>
+            <select id="day" name="day" disabled></select>
+          </span>
+        </div>
+        <div>
+          <span>
+            <label for="hour">Hour:</label>
+            <select id="hour" name="hour" disabled></select>
+          </span>
+          <span>
+            <label for="minute">Minute:</label>
+            <select id="minute" name="minute" disabled></select>
+          </span>
+        </div>
+      </div>
+      <!-- Main UL container -->
+      <ul class="item-container"></ul>
+    </div>
+    <script src="js/functions.js"></script>
+    <script src="js/firefox.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
