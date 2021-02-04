@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/projektai/static/css/main.41289579.chunk.css",
+    "main.js": "/projektai/static/js/main.93f31ca6.chunk.js",
+    "main.js.map": "/projektai/static/js/main.93f31ca6.chunk.js.map",
+    "runtime-main.js": "/projektai/static/js/runtime-main.288668d9.js",
+    "runtime-main.js.map": "/projektai/static/js/runtime-main.288668d9.js.map",
+    "static/js/2.d2af871f.chunk.js": "/projektai/static/js/2.d2af871f.chunk.js",
+    "static/js/2.d2af871f.chunk.js.map": "/projektai/static/js/2.d2af871f.chunk.js.map",
+    "index.html": "/projektai/index.html",
+    "static/css/main.41289579.chunk.css.map": "/projektai/static/css/main.41289579.chunk.css.map",
+    "static/js/2.d2af871f.chunk.js.LICENSE.txt": "/projektai/static/js/2.d2af871f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.288668d9.js",
+    "static/js/2.d2af871f.chunk.js",
+    "static/css/main.41289579.chunk.css",
+    "static/js/main.93f31ca6.chunk.js"
+  ]
+}
